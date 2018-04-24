@@ -1,0 +1,54 @@
+*{
+	margin:0px;
+	padding: 0px;
+}
+
+.centrar{
+	width: 980px;
+	margin:auto;
+}
+#contenedor{
+	
+}
+#titulo{
+	background-color: #3F8180 ;
+	color:white;
+	text-align: center;
+}
+#divLabels{
+	float: left;
+	text-align: left;
+
+}
+#divInputs{
+	float:left;
+	margin-left: 5px;
+
+}
+.labels{
+	margin-top: 10px;
+	display: inline-block;
+}
+.inputs{
+	margin-top: 10px;
+	display: inline-block;
+}
+#labelNinput{
+	width: 33%;
+	margin:auto;
+}
+.boton{
+	margin-top: 10px;
+}
+#error{
+	text-align: center;
+	color: red;
+	
+
+}
+#imagenLog{
+	margin-left: 510px;
+}
+#imagenLogin{
+	background-image: url(imagenes/cir3.jpg);
+}

@@ -1,0 +1,405 @@
+﻿*{
+	margin: 0px;
+	padding:0px;
+}
+body{
+	font-family: 'Raleway', sans-serif;
+}
+.centrar{
+	width: 980px;
+	margin:auto;
+}
+#imglogo{
+	float: left;
+    
+	
+	
+	
+}
+#headMenu{
+	font-size: 14px;
+	background-color: white;
+   
+   
+	
+}
+#menu{
+	float: left;
+	height: 110px;
+   
+    
+	
+	
+	
+	
+}
+#menu ul li{
+	display:inline-block;
+	padding-top: 45px;
+	
+}
+#menu ul li a{
+	text-decoration: none;
+	padding: 10px;
+	color:#3F8180;
+	
+}
+#menu li a:hover {
+	border-bottom: 1px #3F8180 solid;
+	
+}
+.reservaLetra{
+	
+}
+
+.slideshow-container {
+	clear: both;
+ 	position: relative;
+  	margin: auto;
+  	height: 700px;
+}
+
+.mySlides {
+   display: none;
+
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+#razones{
+	margin-top: 230px;
+	color:#3F8180;
+}
+.razon{
+	width: 32%;
+	margin-right: 13px;
+	margin-top: 30px;
+	border-top: 1px #3F8180 solid;
+	padding-top: 10px;
+	padding-bottom: 20px;
+}
+.div1{
+	float:left;
+	text-align: center;
+}
+
+#circulos{	
+	clear:both;
+	background-color: #FEF7EF;
+	height: 300px;
+	padding-top: 50px;
+	
+}
+.circulo{
+	width: 250px;
+	height: 250px;
+	border-radius: 50%;
+	margin-left: 4%;
+	margin-right:3.8%
+}
+#circulo1{
+	float: left;
+	background-image: url(imagenes/cir1.jpg);
+	background-position:50% 50%;
+    background-repeat:no-repeat;    
+
+}
+#circulo2{
+	float: left;
+	background-image: url(imagenes/cir2.jpg);
+	background-position:50% 50%;
+    background-repeat:no-repeat;   
+}
+#circulo3{
+	float: left;
+	background-image: url(imagenes/cir3.jpg);
+	background-position:50% 50%;
+    background-repeat:no-repeat;   
+}
+#opciones{
+	clear: both;
+	background-color:#3F8180;
+	height: 250px;
+	color: #FEF7EF;
+}
+
+#opciones a{
+	text-decoration: none;
+	padding: 5px;
+	border: 1px #FEF7EF solid ;
+	color: #FEF7EF;
+	font-size: 12px;
+	font-weight: bold;
+}
+#footer{
+	clear: both;
+	background-color: #BFBFBF;
+}
+
+.footerDiv{
+	float:left;
+	padding-top: 80px;
+	padding-left: 50px;
+}
+#logoFooter{
+	float: right;
+}
+.negro{
+	font-size: 14px;
+}
+
+#contenedor{
+	clear: both;
+	text-align: center;
+	padding-top: 20px;
+	background-color: #FEF7EF;
+}
+.verde {
+	color: #3F8180;
+}
+
+#menuTratamiento{
+	padding-top: 20px;
+	background-color: white;
+	padding-bottom: 20px;
+
+}
+
+#menuTratamiento a{
+	padding: 0px 20px;
+	text-decoration: none;
+	color:black;
+	border-right: 1px black solid;
+}
+.titulos{
+	font-size: 54px;
+}
+.precios{
+
+	font-size: 20px;
+
+}
+.boton{
+	color: white;
+	background-color: #3F8180;
+	padding: 5px;
+}
+#infoPromos{
+	clear: both;
+	text-align: center;
+}
+table{
+	margin:auto;
+	text-align: center;
+}
+
+#promo{
+	background-color: #D5D5D5;
+	height: 350px;
+}
+
+#circuloPromo{
+	
+	float: left;
+	margin-top: 40px;
+	background-image: url(imagenes/cir4.jpg);
+	border: 5px #FCE2BA solid;
+}
+#info1{
+	float: right;
+	margin-top: 50px;
+	width: 48%;
+	text-align: center;
+}
+#promo2{
+	clear: both;
+	background-color: #480656;
+	height: 350px;
+}
+
+#circuloPromo2{
+	float: right;
+	margin-top: 40px;
+	background-image: url(imagenes/cir5.jpg);
+	border: 5px #FCE2BA solid;
+}
+#info2{
+	float: left;
+	margin-top: 50px;
+	width: 45%;
+	text-align: center;
+}
+#circuloMembre1{
+	float:left;
+	background-color: rgb(86, 162, 146);
+	text-align: center;
+	display: table;
+}
+#circuloMembre2{
+	float: left;
+	background-color: rgb(148, 122, 154);
+	text-align: center;
+	display: table;
+}
+#circuloMembre3{
+	float: left;
+	background-color: rgb(244, 218, 179);
+	text-align: center;
+	display: table;
+}
+#circuloMembre3 p{
+	
+	vertical-align: middle;
+	display: table-cell;
+	
+}#circuloMembre1 p{
+	
+	vertical-align: middle;
+	display: table-cell;
+	
+}
+#circuloMembre2 p{
+	
+	vertical-align: middle;
+	display: table-cell;
+	
+}
+#circulosMembre{
+	margin-top: 50px;
+}
+
+#reglas{
+	clear: both;
+	padding-top: 50px;
+	text-align: center;
+	
+}
+#reglasUL{
+	width: 50%;
+	text-align: justify;
+	display: block;
+}
+#email{
+	background-color: #cccccc;
+	height: 400px;
+	text-align: center;
+	
+}
+#email2{
+	background-color: rgb(86, 162, 146);
+	height: 400px;
+	text-align: center;
+}
+
+.colum{
+	float: left;
+	margin-top: 20px;
+}
+.colum2{
+	float:right;
+	margin-top: 20px;
+}
+#emailForm{
+	
+
+}
+.inputs{
+	display: inline-block;
+	height: 25px;
+}
+#selector{
+	display: inline-block;
+	width: 450px;
+	height: 25px;
+}
+#mensaje{
+
+	clear: both;
+	margin-top: 50px;
+}
+.boton2{
+	padding: 15px;
+	background-color: white;
+}
+#agregarNuevo a{
+	
+	color: red;
+}
+
+.editar{
+	color: blue;
+}
+.eliminar{
+	color: white;
+	background-color: red;
+}
+#formularioTratamiento{
+	clear: both;
+	text-align: center;
+}
+
+.inputTratamiento{
+	display: inline-block;
+	padding: 20px;
+	width: 500px;
+}
+
+#fecha{
+	float: right;
+	
+}
