@@ -52,3 +52,9 @@
 #imagenLogin{
 	background-image: url(imagenes/cir3.jpg);
 }
+
+/* MENSAJE DE ERRORES */
+
+.msgError{
+    color: red;
+}
