@@ -8,6 +8,10 @@
 	<meta name="description" content="Login de admin" >
 	<link rel="stylesheet" href="estilo.css">
 	<link rel="stylesheet" href="style.css">
+    <script src=scripts/jquery.js"></script>
+    <appSettings>
+        <add key="ValidationSettings:UnobtrusiveValidationMode" value="None" />
+    </appSettings>
 </head>
 <body>
 	<form id="form1" runat="server">
@@ -33,6 +37,10 @@
 					<div id="divInputs">
 			            <asp:TextBox ID="txtUsername" runat="server" CssClass="inputs"></asp:TextBox><br>
 			            <asp:TextBox ID="txtPassword" runat="server" CssClass="inputs" TextMode="Password" ></asp:TextBox><br>
+                        
+                        <span style="color:red;font-weight:bold;"><asp:RequiredFieldValidator ID="VCRDato1" runat="server" ControlToValidate="txtUsername" ErrorMessage="Ingrese el usuario"></asp:RequiredFieldValidator></span>
+                        <br />
+                        <span style="color:red;font-weight:bold;"><asp:RequiredFieldValidator ID="VCRDato2" runat="server" ControlToValidate="txtPassword" ErrorMessage="Ingrese el password"></asp:RequiredFieldValidator></span><br />    
                         <asp:Button ID="btnLogin" runat="server" Text="Iniciar sesión" CssClass="boton" OnClick="btnLogin_Click" />
 					</div>				
 			</div>			
