@@ -10,6 +10,7 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
+	<form id="form1" runat="server">
 	<div id="contenedorX">
 		<div id="titulo" >
 			<h1>Bienvenido a Mantra Spa</h1>
@@ -38,10 +39,11 @@
 						<label class="labels" for="">Contraseña:</label>
 					</div>
 					<div id="divInputs">
-						<input class="inputs" type="text" name="usuario"><br>
-						<input autocomplete="new-password" class="inputs" type="password"  name="contrasena"><br>
-						<a class="boton" href="TratamientosAdmin.aspx">Inicio de sesion</a>
+			        <asp:TextBox ID="txtUsername" runat="server" CssClass="inputs"></asp:TextBox><br>
+			        <asp:TextBox ID="txtPassword" runat="server" CssClass="inputs" TextMode="Password" ></asp:TextBox><br>
+                        <asp:Button ID="btnLogin" runat="server" Text="Iniciar sesión" CssClass="boton" OnClick="btnLogin_Click" />
 					</div>
+				
 				
 			</div>
 			
@@ -76,6 +78,8 @@
 
 		</div>
 	</div>
+	
+    </form>
 	
 </body>
 </html>
