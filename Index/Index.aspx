@@ -103,17 +103,17 @@
 			<div class="div1 razon">
 				<p>MEMBRESIA <span style="color: #18E9BA">MANTRA SPA</span></p><br>
 				<p class="negro">Ser miembro Mantra Spa, es saber apreciar las cosas buenas de la vida: el bienestar, la relajación, la comodidad, pero sobre todo, los beneficios. Obtén tu membresía y accede a las ofertas exclusivas para ti.</p><br>
-				<a href="membresia.php">Hacerme miembro</a>
+				<a href="Membresia.aspx">Hacerme miembro</a>
 			</div>
 			<div class="div1 razon">
 				<p>CITAS Y RESERVACIONES <span style="color: #18E9BA">MANTRA SPA</span></p><br>
 				<p class="negro">Comunícate con nosotros vía telefónica o haz tu cita desde nuestra página web. Te invitamos a disfrutar de una experiencia inolvidable de relajación que te hará sentir completamente renovado.</p><br>
-				<a href="tratamientos.php">Hacer una cita</a>
+				<a href="Tratamientos.aspx">Hacer una cita</a>
 			</div>
 			<div class="div1 razon">
 				<p>PROMOCIONES <span style="color: #18E9BA">MANTRA SPA</span></p><br>
 				<p class="negro">Descubre nuestras increibles promociones que haran que estancia con nosotros sea amable y placentera con tu bolsillo. Consulta nuestras promociones 2017</p><br>
-				<a href="promociones.php">Ver promociones</a>
+				<a href="Promociones.aspx">Ver promociones</a>
 			</div>
 		</div>
 		
