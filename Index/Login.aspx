@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Login</title>
+	<title>LoginPanchito</title>
 	<meta name="description" content="Login de admin" >
 	<link rel="stylesheet" href="estilo.css">
 	<link rel="stylesheet" href="style.css">
