@@ -31,25 +31,24 @@
 			<br>
 			<div id="labelNinput">				
 					<div id="divLabels">
-						<label class="labels" for="">Nombre de usuario:</label> <br>
-						<label class="labels" for="">Contraseña:</label>
-					</div>
-					<div id="divInputs">
-			            <asp:TextBox ID="txtUsername" runat="server" CssClass="inputs"></asp:TextBox><br>
-			            <asp:TextBox ID="txtPassword" runat="server" CssClass="inputs" TextMode="Password" ></asp:TextBox><br>
+						<label class="labels" for="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Nombre de usuario:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			            <asp:TextBox ID="txtUsername" runat="server" CssClass="inputs" Height="22px" Width="136px"></asp:TextBox>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
                         
-                        <span style="color:red;font-weight:bold;"><asp:RequiredFieldValidator ID="VCRDato1" runat="server" ControlToValidate="txtUsername" ErrorMessage="Ingrese el usuario"></asp:RequiredFieldValidator></span>
-                        <br />
-                        <span style="color:red;font-weight:bold;"><asp:RequiredFieldValidator ID="VCRDato2" runat="server" ControlToValidate="txtPassword" ErrorMessage="Ingrese el password"></asp:RequiredFieldValidator></span><br />    
+                        <span style="color:red;font-weight:bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:RequiredFieldValidator ID="VCRDato1" runat="server" ControlToValidate="txtUsername" ErrorMessage="El campo usuario no puede estar vacio" Font-Size="Small"></asp:RequiredFieldValidator></span>
+                        </label>
+                        &nbsp;<br>
+						<label class="labels" for="">&nbsp;&nbsp;&nbsp;&nbsp; Contraseña:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			            <asp:TextBox ID="txtPassword" runat="server" CssClass="inputs" TextMode="Password" Height="22px" Width="136px" ></asp:TextBox>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+                        <span style="color:red;font-weight:bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:RequiredFieldValidator ID="VCRDato2" runat="server" ControlToValidate="txtPassword" ErrorMessage="El campo password no puede estar vacio" Font-Size="Small"></asp:RequiredFieldValidator></span></label>
+					&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <asp:Button ID="btnLogin" runat="server" Text="Iniciar sesión" CssClass="boton" OnClick="btnLogin_Click" />
-					</div>				
+                    </div>
 			</div>			
 		</div>		
 	</div>
 	<div id="footer">
 		<div id="sucur"  class="footerDiv">
-			<p><span style="color:#3F8180">SUCURSAL</span> </p>
-			<p>Merida Yucatan</p>
+			<p><span style="color:#3F8180">SUCURSALa Yucatan</p>
 			<p>Calle 19a #345 x8b y 12c Zapata Oriente</p>
 			<p style="border-bottom: 1px black solid ">99-92-13-14-55</p>
 		</div>

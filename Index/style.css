@@ -360,8 +360,7 @@ table{
 }
 .inputs{
 	display: inline-block;
-	height: 25px;
-}
+	}
 #selector{
 	display: inline-block;
 	width: 450px;

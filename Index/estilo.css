@@ -23,11 +23,12 @@
 #divInputs{
 	float:left;
 	margin-left: 5px;
-
+    width: 416px;
 }
 .labels{
 	margin-top: 10px;
 	display: inline-block;
+    width: 387px;
 }
 .inputs{
 	margin-top: 10px;
