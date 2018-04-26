@@ -38,3 +38,23 @@ C:\Users\juandedios\Documents\ProyectoMantraSpa\MantraSpa\Index\bin\Microsoft.Co
 C:\Users\juandedios\Documents\ProyectoMantraSpa\MantraSpa\Index\obj\Debug\Index.csprojResolveAssemblyReference.cache
 C:\Users\juandedios\Documents\ProyectoMantraSpa\MantraSpa\Index\obj\Debug\Index.dll
 C:\Users\juandedios\Documents\ProyectoMantraSpa\MantraSpa\Index\obj\Debug\Index.pdb
+C:\Users\o\Documents\Visual Studio 2015\Projects\Mantra-Spa\Index\bin\roslyn\csc.exe
+C:\Users\o\Documents\Visual Studio 2015\Projects\Mantra-Spa\Index\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\o\Documents\Visual Studio 2015\Projects\Mantra-Spa\Index\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\o\Documents\Visual Studio 2015\Projects\Mantra-Spa\Index\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\o\Documents\Visual Studio 2015\Projects\Mantra-Spa\Index\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\o\Documents\Visual Studio 2015\Projects\Mantra-Spa\Index\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\o\Documents\Visual Studio 2015\Projects\Mantra-Spa\Index\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\o\Documents\Visual Studio 2015\Projects\Mantra-Spa\Index\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\o\Documents\Visual Studio 2015\Projects\Mantra-Spa\Index\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\o\Documents\Visual Studio 2015\Projects\Mantra-Spa\Index\bin\roslyn\vbc.exe
+C:\Users\o\Documents\Visual Studio 2015\Projects\Mantra-Spa\Index\bin\roslyn\VBCSCompiler.exe
+C:\Users\o\Documents\Visual Studio 2015\Projects\Mantra-Spa\Index\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\o\Documents\Visual Studio 2015\Projects\Mantra-Spa\Index\bin\Index.dll.config
+C:\Users\o\Documents\Visual Studio 2015\Projects\Mantra-Spa\Index\bin\Index.dll
+C:\Users\o\Documents\Visual Studio 2015\Projects\Mantra-Spa\Index\bin\Index.pdb
+C:\Users\o\Documents\Visual Studio 2015\Projects\Mantra-Spa\Index\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\o\Documents\Visual Studio 2015\Projects\Mantra-Spa\Index\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\o\Documents\Visual Studio 2015\Projects\Mantra-Spa\Index\obj\Debug\Index.csprojResolveAssemblyReference.cache
+C:\Users\o\Documents\Visual Studio 2015\Projects\Mantra-Spa\Index\obj\Debug\Index.dll
+C:\Users\o\Documents\Visual Studio 2015\Projects\Mantra-Spa\Index\obj\Debug\Index.pdb
