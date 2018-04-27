@@ -402,3 +402,7 @@ table{
 	float: right;
 	
 }
+
+.errorMensaje{
+    color: red;
+}

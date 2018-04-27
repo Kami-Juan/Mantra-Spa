@@ -10,8 +10,13 @@
 	<script defer src="iconos/fontawesome-all.js"></script>
 	<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <script src=scripts/jquery-3.2.1.js"></script>
+    <appSettings>
+        <add key="ValidationSettings:UnobtrusiveValidationMode" value="None" />
+    </appSettings>
 </head>
 <body>
+	<form id="form1" runat="server">
 	<div id="headMenu" class="centrar">
 		<div id="imglogo">
 			<a href="Index.aspx"><img src="imagenes/logo.png" alt="Mantra Spa" width="250"></a>
@@ -41,13 +46,21 @@
 			<!--<form action="enviarEmail.php" method="POST">-->
 			<div class="colum">
 				<label for="">Nombre</label><br>
-				<input  class="inputs" type="text" size="60" name="nombre"><br><br>
+				<asp:TextBox ID="txtNombre" runat="server" CssClass="inputs" Width="360px"></asp:TextBox>
+                <br>
+                    <asp:RequiredFieldValidator CssClass="errorMensaje" ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtNombre" ErrorMessage="El Nombre es requerido"></asp:RequiredFieldValidator>
+                <br>
 				<label for="">Telefono</label><br>
-				<input  class="inputs" type="text" size="60" name="telefono">
+				<asp:TextBox ID="TextBox1" runat="server" CssClass="inputs" Width="360px"></asp:TextBox>
+                <br />
+                <asp:RegularExpressionValidator CssClass="errorMensaje" ID="RegularExpressionValidator1" runat="server" ErrorMessage="El teléfono debe ser una cifra numérica" ControlToValidate="TextBox1"></asp:RegularExpressionValidator>
 			</div>
 			<div class="colum2">
 				<label for="">Correo</label><br>
-				<input class="inputs"  type="text" size="60" name="email"><br><br>
+				<asp:TextBox ID="txtEmail" CssClass="inputs" runat="server" Width="360px"></asp:TextBox>
+                <br>
+                <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" CssClass="errorMensaje" ErrorMessage="El email debe ser válido." ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ControlToValidate="txtEmail"></asp:RegularExpressionValidator>
+                <br>
 				<label for="">Sexo</label><br>
 				<select name="sexo" id="selector">
 					<option value="hombre">Hombre</option>
@@ -55,9 +68,13 @@
 				</select>
 			</div>
 			<div id="mensaje">
-				<label for="">Mensaje</label><br>
-				<textarea name="comentarios" id="" cols="135" rows="10"></textarea>
-			</div><br>
+				<label for="">Mensaje<br />
+                <asp:TextBox ID="txtMensaje" runat="server" TextMode="MultiLine" Columns="135" Rows="10"></asp:TextBox>
+                </label><br>
+
+				&nbsp;</div>
+            <asp:RangeValidator ID="RangeValidator1" runat="server" CssClass="errorMensaje" ErrorMessage="El máximo son 30 caracteres" MaximumValue="30" ControlToValidate="txtMensaje"></asp:RangeValidator>
+            <br>
 			<button class="boton2">Enviar</button>
 			<!--</form>-->
 		</div>
@@ -91,5 +108,6 @@
 
 		</div>
 	</div>
+    </form>
 </body>
 </html>
