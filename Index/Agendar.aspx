@@ -10,8 +10,13 @@
 	<script defer src="iconos/fontawesome-all.js"></script>
 	<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <script src=scripts/jquery-3.2.1.js"></script>
+    <appSettings>
+        <add key="ValidationSettings:UnobtrusiveValidationMode" value="None" />
+    </appSettings>
 </head>
 <body>
+	<form id="form1" runat="server">
 	<div id="headMenu" class="centrar">
 		<div id="imglogo">
 			<a href="Index.aspx"><img src="imagenes/logo.png" alt="Mantra Spa" width="250"></a>
@@ -49,13 +54,25 @@
 
 				
 				<label for="">Nombre</label><br>
-				<input  class="inputs" type="text" size="60" name="cliente" required><br><br>
+				<asp:TextBox ID="txtNombre" runat="server" Height="23px" Width="359px"></asp:TextBox> <br />
+                <span style="color:red">
+                 <asp:RequiredFieldValidator ID="VCRDato1" runat="server" ControlToValidate="txtNombre" ErrorMessage="Ingrese su nombre"></asp:RequiredFieldValidator>
+                </span>
+                    <br><br>
 				<label for="">Telefono</label><br>
-				<input  class="inputs" type="text" size="60" name="telefono" required>
-			</div>
+                
+				<asp:TextBox ID="txtTelefono" runat="server" Height="23px" Width="359px"></asp:TextBox><br />
+                <span style="color:red">
+                <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="Número no valido" ControlToValidate="txtTelefono" ValidationExpression="^\d+$"></asp:RegularExpressionValidator>
+			    </span>
+                    </div>
 			<div class="colum2">
 				<label for="">Correo</label><br>
-				<input class="inputs"  type="text" size="60" name="email" required><br><br>
+				<asp:TextBox ID="txtEmail" runat="server" Height="23px" Width="359px"></asp:TextBox><br />
+                <span style="color:red">
+                <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ErrorMessage="Correo no valido" ControlToValidate="txtEmail" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
+                 </span>
+                    <br> <br>
 				<label for="">Sexo</label><br>
 				<select name="sexo" id="selector">
 					<option value="hombre">Hombre</option>
@@ -77,5 +94,8 @@
 		
 	</div>
 	
+    </form>
+	
 </body>
 </html>
+
