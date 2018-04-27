@@ -40,24 +40,26 @@
 		<hr style="height: 0px; width: 100px; margin: auto; border: 1px red solid;"><br>
 		<p class="verde" style="font-size: 20px;">SI TIENES ALGUNA DUDA, COMENTARIO O SUGERENCIA, NO DUDES EN LLAMARNOS, VISITARNOS O ESCRIBIRNOS. ¡QUEREMOS ESCUCHARTE!</p>
 	</div><br><br>
+    <div >
 
+    </div>
 	<div id="email">
 		<div id="emailForm"  class="centrar">
 			<!--<form action="enviarEmail.php" method="POST">-->
 			<div class="colum">
 				<label for="">Nombre</label><br>
-				<asp:TextBox ID="txtNombre" runat="server" CssClass="inputs" Width="360px"></asp:TextBox>
+				<asp:TextBox ID="txtNombre" runat="server" CssClass="inputs" Width="360px" OnTextChanged="txtNombre_TextChanged"></asp:TextBox>
                 <br>
                     <asp:RequiredFieldValidator CssClass="errorMensaje" ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtNombre" ErrorMessage="El Nombre es requerido"></asp:RequiredFieldValidator>
                 <br>
 				<label for="">Telefono</label><br>
-				<asp:TextBox ID="TextBox1" runat="server" CssClass="inputs" Width="360px"></asp:TextBox>
+				<asp:TextBox ID="TextBox1" runat="server" CssClass="inputs" Width="360px" OnTextChanged="TextBox1_TextChanged"></asp:TextBox>
                 <br />
-                <asp:RegularExpressionValidator CssClass="errorMensaje" ID="RegularExpressionValidator1" runat="server" ErrorMessage="El teléfono debe ser una cifra numérica" ControlToValidate="TextBox1"></asp:RegularExpressionValidator>
+                <asp:RegularExpressionValidator CssClass="errorMensaje" ID="RegularExpressionValidator1" runat="server" ErrorMessage="El teléfono debe ser una cifra numérica" ControlToValidate="TextBox1" ValidationExpression="^\d+$"></asp:RegularExpressionValidator>
 			</div>
 			<div class="colum2">
 				<label for="">Correo</label><br>
-				<asp:TextBox ID="txtEmail" CssClass="inputs" runat="server" Width="360px"></asp:TextBox>
+				<asp:TextBox ID="txtEmail" CssClass="inputs" runat="server" Width="360px" OnTextChanged="txtEmail_TextChanged"></asp:TextBox>
                 <br>
                 <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" CssClass="errorMensaje" ErrorMessage="El email debe ser válido." ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ControlToValidate="txtEmail"></asp:RegularExpressionValidator>
                 <br>
@@ -69,14 +71,20 @@
 			</div>
 			<div id="mensaje">
 				<label for="">Mensaje<br />
-                <asp:TextBox ID="txtMensaje" runat="server" TextMode="MultiLine" Columns="135" Rows="10"></asp:TextBox>
+                <asp:TextBox ID="txtMensaje" runat="server" TextMode="MultiLine" Columns="135" Rows="10" OnTextChanged="txtMensaje_TextChanged"></asp:TextBox>
                 </label><br>
 
 				&nbsp;</div>
-            <asp:RangeValidator ID="RangeValidator1" runat="server" CssClass="errorMensaje" ErrorMessage="El máximo son 30 caracteres" MaximumValue="30" ControlToValidate="txtMensaje"></asp:RangeValidator>
+            
             <br>
-			<button class="boton2">Enviar</button>
 			<!--</form>-->
+		    <asp:Button 
+                CssClass="boton2" 
+                ID="btnContactar" 
+                runat="server" 
+                Text="Guardar" 
+                OnClick="btnContactar_Click"
+                 />
 		</div>
 		
 	</div>

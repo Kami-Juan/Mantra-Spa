@@ -72,6 +72,7 @@
     <Content Include="Contacto.aspx" />
     <Content Include="Editar.aspx" />
     <Content Include="estilo.css" />
+    <Content Include="Informacion.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Membresia.aspx" />
     <Content Include="packages.config" />
@@ -133,6 +134,13 @@
     </Compile>
     <Compile Include="Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Informacion.aspx.cs">
+      <DependentUpon>Informacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Informacion.aspx.designer.cs">
+      <DependentUpon>Informacion.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>

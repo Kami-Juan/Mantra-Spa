@@ -32,13 +32,13 @@
 			<div id="labelNinput">				
 					<div id="divLabels">
 						<label class="labels" for="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Nombre de usuario:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			            <asp:TextBox ID="txtUsername" runat="server" CssClass="inputs" Height="22px" Width="136px"></asp:TextBox>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+			            <asp:TextBox ID="txtUsername" runat="server" CssClass="inputs" Height="22px" Width="136px" OnTextChanged="txtUsername_TextChanged"></asp:TextBox>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
                         
                         <span style="color:red;font-weight:bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:RequiredFieldValidator ID="VCRDato1" runat="server" ControlToValidate="txtUsername" ErrorMessage="El campo usuario no puede estar vacio" Font-Size="Small"></asp:RequiredFieldValidator></span>
                         </label>
                         &nbsp;<br>
 						<label class="labels" for="">&nbsp;&nbsp;&nbsp;&nbsp; Contraseña:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			            <asp:TextBox ID="txtPassword" runat="server" CssClass="inputs" TextMode="Password" Height="22px" Width="136px" ></asp:TextBox>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+			            <asp:TextBox ID="txtPassword" runat="server" CssClass="inputs" TextMode="Password" Height="22px" Width="136px" OnTextChanged="txtPassword_TextChanged" ></asp:TextBox>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
                         <span style="color:red;font-weight:bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:RequiredFieldValidator ID="VCRDato2" runat="server" ControlToValidate="txtPassword" ErrorMessage="El campo password no puede estar vacio" Font-Size="Small"></asp:RequiredFieldValidator></span></label>
 					&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <asp:Button ID="btnLogin" runat="server" Text="Iniciar sesión" CssClass="boton" OnClick="btnLogin_Click" />

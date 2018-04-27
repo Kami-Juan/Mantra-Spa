@@ -22,7 +22,7 @@ namespace Index
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
-            if (txtUsername.Text == "MantraSpa" && txtPassword.Text == "123")
+            if (Convert.ToString(this.ViewState["user"]) == "MantraSpa" && Convert.ToString(this.ViewState["pass"]) == "123")
             {
                 HttpCookie ck = new HttpCookie("username", txtUsername.Text);
                 ck.Expires = DateTime.Now.AddMinutes(60*24*365);
@@ -31,16 +31,26 @@ namespace Index
                 this.Session["Error"] = null;
                 this.Response.Redirect("TratamientosAdmin.aspx");
             }
-            else if(txtUsername.Text != "MantraSpa")
+            else if(Convert.ToString(this.ViewState["user"]) != "MantraSpa")
             {
                 this.Session["Error"] = "El usuario "+ txtUsername.Text + " no exite, por favor escribir otro";
                 this.Response.Redirect(Request.RawUrl);
             }
-            else if (txtPassword.Text != "123")
+            else if (Convert.ToString(this.ViewState["pass"]) != "123")
             {
                 this.Session["Error"] = "La contraseña no corresponde con el usuario";
                 this.Response.Redirect(Request.RawUrl);
             }
+        }
+
+        protected void txtUsername_TextChanged(object sender, EventArgs e)
+        {
+            this.ViewState["user"] = txtUsername.Text;
+        }
+
+        protected void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+            this.ViewState["pass"] = txtPassword.Text;
         }
     }
 }
