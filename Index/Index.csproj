@@ -85,6 +85,7 @@
   <ItemGroup>
     <Content Include="Index.aspx" />
     <Content Include="Promociones.aspx" />
+    <Content Include="salida.aspx" />
     <Content Include="style.css" />
     <Content Include="Tratamientos.aspx" />
     <Content Include="TratamientosAdmin.aspx" />
@@ -155,6 +156,13 @@
       <DependentUpon>Promociones.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="salida.aspx.cs">
+      <DependentUpon>salida.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="salida.aspx.designer.cs">
+      <DependentUpon>salida.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Tratamientos.aspx.cs">
       <DependentUpon>Tratamientos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

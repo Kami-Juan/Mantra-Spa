@@ -23,7 +23,7 @@
 				<li> <a href="Membresia.aspx">MEMBRESIA</a>	</li>
 				<li> <a href="Promociones.aspx">PROMOCIONES</a>	</li>
 				<li> <a href="Citas.aspx">CITAS </a>	</li>
-				<li><a class="reservaLetra" href="" style="color: red;"></i> ¡SALIR DE SESION!</a></li>
+				<li><a class="reservaLetra" href="salida.aspx" style="color: red;"></i> ¡SALIR DE SESION!</a></li>
 			</ul>
 		</div>
 	</div>

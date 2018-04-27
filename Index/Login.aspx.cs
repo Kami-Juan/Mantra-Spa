@@ -25,7 +25,7 @@ namespace Index
             if (txtUsername.Text == "MantraSpa" && txtPassword.Text == "123")
             {
                 HttpCookie ck = new HttpCookie("username", txtUsername.Text);
-                ck.Expires = DateTime.Now.AddMinutes(3);
+                ck.Expires = DateTime.Now.AddMinutes(60*24*365);
                 this.Response.Cookies.Add(ck);
 
                 this.Session["Error"] = null;

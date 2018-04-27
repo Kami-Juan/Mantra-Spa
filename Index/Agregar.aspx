@@ -10,8 +10,13 @@
 	<script defer src="iconos/fontawesome-all.js"></script>
 	<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <script src=scripts/jquery-3.2.1.js"></script>
+    <appSettings>
+        <add key="ValidationSettings:UnobtrusiveValidationMode" value="None" />
+    </appSettings>
 </head>
 <body>
+	<form id="form1" runat="server">
 	<div id="headMenu" class="centrar">
 		<div id="imglogo">
 			<a href="Index.aspx"><img src="imagenes/logo.png" alt="Mantra Spa" width="250"></a>
@@ -22,14 +27,14 @@
 				<li> <a href="Membresia.aspx">MEMBRESIA</a>	</li>
 				<li> <a href="Promociones.aspx">PROMOCIONES</a>	</li>
 				<li> <a href="Citas.aspx">CITAS </a>	</li>
-				<li><a class="reservaLetra" href="" style="color: red;"></i> ¡SALIR DE SESION!</a></li>
+				<li><a class="reservaLetra" href="salida.aspx" style="color: red;"></i> ¡SALIR DE SESION!</a></li>
 			</ul>
 		</div>
 	</div>
 
 	<div id="formularioTratamiento" class="centrar">
-		
-			<p>Estimado Administrador por favor captura los datos del tratamiento nuevo</p><br><br>
+             <asp:Label ID="Label1" runat="server" Text="Label">Estimado Administrador por favor captura los datos del tratamiento nuevo</asp:Label>
+			<br><br>
 
 			<input required class="inputTratamiento" type="text" placeholder="Nombre del tratamiento" name="nombre"><br><br>
 			<input required style="" class="inputTratamiento" type="text" placeholder="Descripcion" name="descripcion"><br><br>
@@ -47,9 +52,23 @@
 				<option value="fuerte">Fuerte</option>
 				<option value="media">Media</option>
 				<option value="suave">Suave</option>
-			</select><br><br>
-			<input required class="inputTratamiento" type="text" placeholder="Duracion en minutos o cantidad de sesiones" name="duracion"><br><br>
-			<input required class="inputTratamiento" type="text" placeholder="Precio $$" name="precio"><br><br>
+			</select><br />
+             <br />
+             <asp:Label ID="Label2" runat="server" Text="Tratamiento"></asp:Label>
+             <br />
+             <br />
+            <asp:TextBox ID="txtTratamiento" runat="server" Height="56px" Width="535px"></asp:TextBox>
+             <br />
+             <br />
+             <asp:Label ID="Label3" runat="server" Text="Precio"></asp:Label>
+             <br>
+			<br />
+            <asp:TextBox ID="txtPrecio" runat="server" Height="56px" Width="535px"></asp:TextBox>
+            <br/>
+            <span style="color:red">
+            <asp:RangeValidator ID="RangeValidator1" runat="server" ErrorMessage="Precio fuera de rango" ControlToValidate="txtPrecio" MinimumValue="300" MaximumValue="6000" ></asp:RangeValidator>
+            </span>
+             <br><br>
 
 			<button class="boton">Enviar datos</button>
 
@@ -78,9 +97,8 @@
 			<a style="text-decoration: none; color: black;" href=""><i class="fa fa-amazon"></i>Youtube</a>
 		</div>
 		<div id="logoFooter" >
-			<img src="imagenes/logo.png" alt="" style="width: 90%">
-
-		</div>
+			&nbsp;<img src="imagenes/logo.png" alt="" style="width: 90%"></div>
 	</div>
+    </form>
 </body>
 </html>
