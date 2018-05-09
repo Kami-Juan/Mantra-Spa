@@ -36,9 +36,9 @@
              <asp:Label ID="Label1" runat="server" Text="Label">Estimado Administrador por favor captura los datos del tratamiento nuevo</asp:Label>
 			<br><br>
 
-			<input required class="inputTratamiento" type="text" placeholder="Nombre del tratamiento" name="nombre"><br><br>
-			<input required style="" class="inputTratamiento" type="text" placeholder="Descripcion" name="descripcion"><br><br>
-			<select required style="width: 550px;" class="inputTratamiento" name="tipo" id="">
+			<input required class="inputTratamiento" type="text" placeholder="Nombre del tratamiento" name="nombre" id="txtNombre"><br><br>
+			<input required style="" class="inputTratamiento" type="text" placeholder="Descripcion" name="descripcion" id="txtDescipcion"><br><br>
+			<select required style="width: 550px;" class="inputTratamiento" name="tipo" id="tipo">
 				<option value="">--Tipo de tratamiento--</option>
 				<option value="masaje">Masaje</option>
 				<option value="corporal">Corporal</option>
@@ -46,8 +46,8 @@
 				<option value="depilacion">Depilacion</option>
 				<option value="maniypedi">Manicure y Pedicure</option>
 			</select><br><br>
-			<input class="inputTratamiento" type="text" placeholder="Zonas" name="zonas"><br><br>
-			<select required style="width: 550px;" class="inputTratamiento" name="presion" id="">
+			<input class="inputTratamiento" type="text" placeholder="Zonas" name="zonas" id="zonas"><br><br>
+			<select required style="width: 550px;" class="inputTratamiento" name="presion" id="presion">
 				<option value="">--Presion Ejercida--</option>
 				<option value="fuerte">Fuerte</option>
 				<option value="media">Media</option>
@@ -70,7 +70,13 @@
             </span>
              <br><br>
 
-			<button class="boton">Enviar datos</button>
+	
+
+	         <asp:Button ID="btnEnviar" CssClass="boton" runat="server" Text="Enviar datos" OnClick="btnEnviar_Click" />
+
+		
+
+	         <asp:Label ID="lblRespuesta" runat="server" Text="Label"></asp:Label>
 
 		
 
