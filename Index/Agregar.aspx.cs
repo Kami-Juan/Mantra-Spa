@@ -23,11 +23,11 @@ namespace Index
         protected void btnEnviar_Click(object sender, EventArgs e)
         {
             
-            String nombre = this.Request.Form["txtNombre"];
-            String descripcion = this.Request.Form["txtDescipcion"]; 
+            String nombre = this.Request.Form["nombre"];
+            String descripcion = this.Request.Form["descripcion"]; 
             String tipo = this.Request.Form["tipo"];
             String zonas = this.Request.Form["zonas"];
-            String presion = this.Request.Form["precion"];
+            String presion = this.Request.Form["presion"];
             String tratamiento = this.Request.Form["txtTratamiento"]; 
             String precio = this.Request.Form["txtPrecio"];
 
