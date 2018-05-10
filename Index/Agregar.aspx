@@ -36,8 +36,8 @@
              <asp:Label ID="Label1" runat="server" Text="Label">Estimado Administrador por favor captura los datos del tratamiento nuevo</asp:Label>
 			<br><br>
 
-			<input required class="inputTratamiento" type="text" placeholder="Nombre del tratamiento" name="nombre" id="txtNombre"><br><br>
-			<input required style="" class="inputTratamiento" type="text" placeholder="Descripcion" name="descripcion" id="txtDescipcion"><br><br>
+			<input required class="inputTratamiento" type="text" placeholder="Nombre del tratamiento" name="txtNombre" id="txtNombre"><br><br>
+			<input required style="" class="inputTratamiento" type="text" placeholder="Descripcion" name="txtDescripcion" id="txtDescipcion"><br><br>
 			<select required style="width: 550px;" class="inputTratamiento" name="tipo" id="tipo">
 				<option value="">--Tipo de tratamiento--</option>
 				<option value="masaje">Masaje</option>

@@ -39,7 +39,9 @@
 		<p style="font-size: 52px;">Contáctanos</p>
 		<hr style="height: 0px; width: 100px; margin: auto; border: 1px red solid;"><br>
 		<p class="verde" style="font-size: 20px;">SI TIENES ALGUNA DUDA, COMENTARIO O SUGERENCIA, NO DUDES EN LLAMARNOS, VISITARNOS O ESCRIBIRNOS. ¡QUEREMOS ESCUCHARTE!</p>
-	</div><br><br>
+	</div><br>
+        <asp:Label ID="lblRespuesta" runat="server" Font-Size="XX-Large" ForeColor="#33CC33"></asp:Label>
+        <br>
     <div >
 
     </div>

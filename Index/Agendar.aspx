@@ -39,7 +39,9 @@
 		<p style="font-size: 52px;">AGENDA UNA CITA</p>
 		<hr style="height: 0px; width: 100px; margin: auto; border: 1px red solid;"><br>
 		<p class="verde" style="font-size: 20px;">Solo tienes que llenar el formulario con tus datos y el horario que prefieras, nosotros te agendaremos</p>
-	</div><br><br>
+	</div><br>
+        <asp:Label ID="lblRespuesta" runat="server"></asp:Label>
+        <br>
 
 	<div id="email2">
 
@@ -48,7 +50,7 @@
 			
 				 <div id="seleccion" style="text-align: center">
 				 	<label for="">Seleccionaste el tratamiento:</label><br>
-				 	<input class="verde" style="text-align: center; font-size: 30px" value="Recupera nombre aqui" name="nombre" readonly >
+				 	<input class="verde" style="text-align: center; font-size: 30px" value="Recupera nombre aqui" name="nombre" readonly  id="nombre">
 				 </div>
 			<div class="colum">
 
@@ -74,7 +76,7 @@
                  </span>
                     <br> <br>
 				<label for="">Sexo</label><br>
-				<select name="sexo" id="selector">
+				<select name="sexo"  id="sexo">
 					<option value="hombre">Hombre</option>
 					<option value="mujer">Mujer</option>
 				</select>
@@ -82,13 +84,13 @@
 			<div id="mensaje" style="padding-top: 30px;">
 				<label for="">HORARIO</label><br>
 				<p style="font-size: 10px;">En caso de variaciones en el horario comunicate con nosotros</p><br>
-				<select name="horario" id="selector" class="" required>
+				<select name="horario" id="horario" class="" required>
 					<option value="temprano">Matutino 8:00 am</option>
 					<option value="tarde">Vespertino 13:00 pm</option>
 					<option value="noche">Nocturno 8:00 pm</option>
 				</select>
-			</div><br>
-			<button class="boton2">Enviar</button>
+			</div><br>		
+		         <asp:Button ID="btnEnviar" CssClass="boton2" runat="server" Text="Enviar" OnClick="btnEnviar_Click" />
 			
 		</div>
 		
