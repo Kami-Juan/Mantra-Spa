@@ -34,11 +34,12 @@ namespace Index
             SqlConnection Conn;
             String OrdenSQL;
             Conn = new SqlConnection();
-            Conn.ConnectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C: \\Users\\o\\Documents\\Visual Studio 2015\\Projects\\spabd.mdf; Integrated Security=True;Connect Timeout=30";
+            Conn.ConnectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\juandedios\\Documents\\ProyectoMantraSpa\\Mantra-Spa\\spabd.mdf;Integrated Security=True;Connect Timeout=30";
             try
             {
                 Conn.Open();
-                OrdenSQL = String.Format("INSERT INTO tratamientos(Id,tipo,nombre,descripcion,presion,duracion,precio) VALUES({0},'{1}','{2}','{3}','{4}',{5},{6})", 1,tipo, nombre,descripcion, presion,10,precio);
+                OrdenSQL = String.Format("INSERT INTO tratamientos(tipo,nombre,descripcion,presion,duracion,precio) VALUES('{0}','{1}','{2}','{3}',{4},{5})",tipo, nombre,descripcion, presion,10,10);
+
                 SqlCommand cmd = new SqlCommand(OrdenSQL, Conn);
                 cmd.ExecuteNonQuery();
 
