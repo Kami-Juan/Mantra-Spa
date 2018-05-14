@@ -4,7 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-
+using System.Data;
+using System.Data.SqlClient;
 namespace Index
 {
     public partial class Login : System.Web.UI.Page
@@ -22,6 +23,28 @@ namespace Index
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
+            SqlConnection Conn;
+            String OrdenSQL;
+            Conn = new SqlConnection();
+            //Conn.ConnectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\juandedios\\Documents\\ProyectoMantraSpa\\Mantra-Spa\\spabd.mdf;Integrated Security=True;Connect Timeout=30";
+            Conn.ConnectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\o\\Documents\\Mantra-Spa\\spabd.mdf;Integrated Security=True;Connect Timeout=30";
+            try
+            {
+                Conn.Open();
+                OrdenSQL = String.Format("");
+
+                SqlCommand cmd = new SqlCommand(OrdenSQL, Conn);
+                cmd.ExecuteNonQuery();
+
+                //lblRespuesta.Text = "Se ingresó registro";
+                Conn.Close();
+            }
+            catch (Exception ex)
+            {
+                //lblRespuesta.Text = "Error " + ex;
+            }
+
+
             if (Convert.ToString(this.ViewState["user"]) == "MantraSpa" && Convert.ToString(this.ViewState["pass"]) == "123")
             {
                 HttpCookie ck = new HttpCookie("username", txtUsername.Text);
