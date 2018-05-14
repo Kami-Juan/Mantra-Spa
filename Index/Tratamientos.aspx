@@ -12,6 +12,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 </head>
 <body>
+	<form id="form1" runat="server">
 	<div id="headMenu" class="centrar">
 		<div id="imglogo">
 			<a href="Index.aspx"><img src="imagenes/logo.png" alt="Mantra Spa" width="250"></a>
@@ -62,7 +63,24 @@
 			</p>
 			
 			<table width="700">
+                <tr>
+                    <td>
+                        <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource2" Width="693px">
+                            <Columns>
+                                <asp:BoundField DataField="nombre" HeaderText="nombre" SortExpression="nombre" />
+                                <asp:BoundField DataField="descripcion" HeaderText="descripcion" SortExpression="descripcion" />
+                                <asp:BoundField DataField="presion" HeaderText="presion" SortExpression="presion" />
+                                <asp:BoundField DataField="duracion" HeaderText="duracion" SortExpression="duracion" />
+                                <asp:BoundField DataField="precio" HeaderText="precio" SortExpression="precio" />
+                            </Columns>
+                        </asp:GridView>
+                        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:spabdConnectionString %>" SelectCommand="SELECT [nombre], [descripcion], [presion], [duracion], [precio] FROM tratamientos WHERE (tipo='masaje')"></asp:SqlDataSource>
+                        <br />
+                    </td>
 
+                </tr> <br /> 
+                <a style="border-radius: 16px; text-decoration:none;" class="boton" href="Agendar.aspx">Agendar Cita</a><br><br>
+              
 				
 
 			</table>
@@ -74,8 +92,18 @@
 			
 			<table width="700">
 
-				<h3>AQUI RECUPERA DATOSD DE LA BD</h3>
-                <h4>Y cada tratamiento tiene botones para agendar la cita como este que te llevan a un formulario para agendar</h4> <br />
+				<asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" Width="708px">
+                    <Columns>
+                       
+                        <asp:BoundField DataField="Nombre" HeaderText="Nombre" SortExpression="nombre" />
+                        <asp:BoundField DataField="Descripcion" HeaderText=" Descripcion " SortExpression="descripcion" />
+                        <asp:BoundField DataField="Presion" HeaderText=" Presion " SortExpression="presion" />
+                        <asp:BoundField DataField="Duracion" HeaderText=" Duracion " SortExpression="duracion" />
+                        <asp:BoundField DataField="Precio" HeaderText=" Precio " SortExpression="precio" />
+                    </Columns>
+                </asp:GridView>
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:spabdConnectionString %>" SelectCommand="SELECT tipo, nombre, descripcion, presion, duracion, precio FROM tratamientos WHERE (tipo = 'corporal')"></asp:SqlDataSource>
+                <br />
                 <a style="border-radius: 16px; text-decoration:none;" class="boton" href="Agendar.aspx">Agendar Cita</a><br><br>
 
 			</table>
@@ -88,7 +116,29 @@
 			
 			<table width="700">
 
-				<h3>AQUI RECUPERA DATOSD DE LA BD</h3>
+			    <tr>
+                    <td>
+                        <br />
+                        <asp:GridView ID="GridView6" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource3" Width="707px">
+                            <Columns>
+                                <asp:BoundField DataField="nombre" HeaderText="nombre" SortExpression="nombre" />
+                                <asp:BoundField DataField="descripcion" HeaderText="descripcion" SortExpression="descripcion" />
+                                <asp:BoundField DataField="presion" HeaderText="presion" SortExpression="presion" />
+                                <asp:BoundField DataField="duracion" HeaderText="duracion" SortExpression="duracion" />
+                                <asp:BoundField DataField="precio" HeaderText="precio" SortExpression="precio" />
+                            </Columns>
+                        </asp:GridView>
+                        <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:spabdConnectionString %>" SelectCommand="SELECT [nombre], [descripcion], [presion], [duracion], [precio] FROM [tratamientos] WHERE ([tipo] = @tipo)">
+                            <SelectParameters>
+                                <asp:Parameter DefaultValue="facial" Name="tipo" Type="String" />
+                            </SelectParameters>
+                        </asp:SqlDataSource>
+                    </td> <br />
+                    <a style="border-radius: 16px; text-decoration:none;" class="boton" href="Agendar.aspx">Agendar Cita</a><br><br>
+                </tr>
+
+				
+				
 
 			</table>
 			<a name="Depilacion" id="a"></a>
@@ -99,7 +149,26 @@
 			
 			<table width="700">
 
-				<h3>AQUI RECUPERA DATOSD DE LA BD</h3>
+				<tr>
+                    <td>
+                        <asp:GridView ID="GridView8" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource4" Width="703px">
+                            <Columns>
+                                <asp:BoundField DataField="descripcion" HeaderText="descripcion" SortExpression="descripcion" />
+                                <asp:BoundField DataField="nombre" HeaderText="nombre" SortExpression="nombre" />
+                                <asp:BoundField DataField="presion" HeaderText="presion" SortExpression="presion" />
+                                <asp:BoundField DataField="duracion" HeaderText="duracion" SortExpression="duracion" />
+                                <asp:BoundField DataField="precio" HeaderText="precio" SortExpression="precio" />
+                            </Columns>
+                        </asp:GridView>
+                        <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:spabdConnectionString %>" SelectCommand="SELECT [descripcion], [nombre], [presion], [duracion], [precio] FROM [tratamientos] WHERE ([tipo] = @tipo)">
+                            <SelectParameters>
+                                <asp:Parameter DefaultValue="depilacion" Name="tipo" Type="String" />
+                            </SelectParameters>
+                        </asp:SqlDataSource>
+                    </td> <br />
+                    <a style="border-radius: 16px; text-decoration:none;" class="boton" href="Agendar.aspx">Agendar Cita</a><br><br>
+                </tr>
+				
 
 			</table>
 			<a name="ManiPedi" id="a"></a>
@@ -110,7 +179,28 @@
 			
 			<table width="700">
 
-				<h3>AQUI RECUPERA DATOSD DE LA BD</h3>
+				<tr>
+                    <td>
+                        <asp:GridView ID="GridView7" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource5" Width="693px">
+                            <Columns>
+                                <asp:BoundField DataField="nombre" HeaderText="nombre" SortExpression="nombre" />
+                                <asp:BoundField DataField="descripcion" HeaderText="descripcion" SortExpression="descripcion" />
+                                <asp:BoundField DataField="presion" HeaderText="presion" SortExpression="presion" />
+                                <asp:BoundField DataField="duracion" HeaderText="duracion" SortExpression="duracion" />
+                                <asp:BoundField DataField="precio" HeaderText="precio" SortExpression="precio" />
+                            </Columns>
+                        </asp:GridView>
+                        <asp:SqlDataSource ID="SqlDataSource5" runat="server" ConnectionString="<%$ ConnectionStrings:spabdConnectionString %>" SelectCommand="SELECT [nombre], [descripcion], [presion], [duracion], [precio] FROM [tratamientos] WHERE ([tipo] LIKE '%' + @tipo + '%')">
+                            <SelectParameters>
+                                <asp:Parameter DefaultValue="manicure" Name="tipo" Type="String" />
+                            </SelectParameters>
+                        </asp:SqlDataSource>
+                        <br />
+                    </td>
+                    <br /> 
+                    <a style="border-radius: 16px; text-decoration:none;" class="boton" href="Agendar.aspx">Agendar Cita</a><br><br>
+                </tr>
+				
 
 			</table>
 
@@ -147,6 +237,9 @@
 
 		</div>
 	</div>
+
+
+    </form>
 
 
 </body>
