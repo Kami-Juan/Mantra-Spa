@@ -23,12 +23,12 @@ namespace Index
         protected void btnEnviar_Click(object sender, EventArgs e)
         {
             
-            String nombre = this.Request.Form["nombre"];
-            String descripcion = this.Request.Form["descripcion"]; 
+            String nombre = this.Request.Form["txtNombre"];
+            String descripcion = this.Request.Form["txtDescripcion"]; 
             String tipo = this.Request.Form["tipo"];
-            String zonas = this.Request.Form["zonas"];
+            //String zonas = this.Request.Form["zonas"];
             String presion = this.Request.Form["presion"];
-            String tratamiento = this.Request.Form["txtTratamiento"]; 
+           // String tratamiento = this.Request.Form["txtTratamiento"]; 
             String precio = this.Request.Form["txtPrecio"];
 
             
@@ -37,11 +37,11 @@ namespace Index
             String OrdenSQL;
             Conn = new SqlConnection();
             //Conn.ConnectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\juandedios\\Documents\\ProyectoMantraSpa\\Mantra-Spa\\spabd.mdf;Integrated Security=True;Connect Timeout=30";
-            Conn.ConnectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\o\\Documents\\Mantra-Spa\\spabd.mdf;Integrated Security=True;Connect Timeout=30";
+            Conn.ConnectionString = ("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\llito\\Documents\\Visual Studio 2015\\Projects\\Mantra-Spa\\spabd.mdf;Integrated Security=True;Connect Timeout=30");
             try
             {
                 Conn.Open();
-                OrdenSQL = String.Format("INSERT INTO tratamientos(tipo,nombre,descripcion,presion,duracion,precio) VALUES('{0}','{1}','{2}','{3}',{4},{5})", tipo, nombre, descripcion, presion, 10, 10);
+                OrdenSQL = String.Format("INSERT INTO tratamientos(tipo,nombre,descripcion,presion,duracion,precio) VALUES('{0}','{1}','{2}','{3}',{4},{5})", tipo, nombre, descripcion, presion, 10, txtPrecio);
 
                 SqlCommand cmd = new SqlCommand(OrdenSQL, Conn);
                 cmd.ExecuteNonQuery();

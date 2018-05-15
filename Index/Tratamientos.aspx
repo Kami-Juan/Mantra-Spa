@@ -119,13 +119,22 @@
 			    <tr>
                     <td>
                         <br />
-                        <asp:GridView ID="GridView6" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource3" Width="707px">
+                       <asp:GridView ID="GridView6" runat="server" AutoGenerateColumns="false" DataKeyNames="id" OnPageIndexChanging="GridView6_PageIndexChanging" OnRowCancelingEdit="GridView6_RowCancelingEdit" OnRowDeleting="GridView6_RowDeleting" OnRowEditing="GridView6_RowEditing" OnRowUpdating="GridView6_RowUpdating">
                             <Columns>
+                                <asp:BoundField DataField="id" HeaderText="S.No." />  
                                 <asp:BoundField DataField="nombre" HeaderText="nombre" SortExpression="nombre" />
                                 <asp:BoundField DataField="descripcion" HeaderText="descripcion" SortExpression="descripcion" />
                                 <asp:BoundField DataField="presion" HeaderText="presion" SortExpression="presion" />
                                 <asp:BoundField DataField="duracion" HeaderText="duracion" SortExpression="duracion" />
                                 <asp:BoundField DataField="precio" HeaderText="precio" SortExpression="precio" />
+                               
+                                <asp:CommandField ShowEditButton="true"/>
+                                <asp:CommandField ShowDeleteButton="true"/>
+                                <asp:TemplateField>
+                                    <ItemTemplate>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+                                
                             </Columns>
                         </asp:GridView>
                         <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:spabdConnectionString %>" SelectCommand="SELECT [nombre], [descripcion], [presion], [duracion], [precio] FROM [tratamientos] WHERE ([tipo] = @tipo)">
@@ -241,6 +250,10 @@
 
     </form>
 
-
+    <script>
+        function Eliminar(e) {
+            console.log(e);
+          }
+    </script>
 </body>
 </html>
