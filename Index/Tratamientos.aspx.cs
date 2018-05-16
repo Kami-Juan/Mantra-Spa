@@ -11,7 +11,8 @@ namespace Tratamientos
 {
     public partial class Tratamientos : System.Web.UI.Page
     {
-        private SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\llito\\Documents\\Visual Studio 2015\\Projects\\Mantra-Spa\\spabd.mdf;Integrated Security=True;Connect Timeout=30");
+        // private SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\llito\\Documents\\Visual Studio 2015\\Projects\\Mantra-Spa\\spabd.mdf;Integrated Security=True;Connect Timeout=30");
+        private SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\juandedios\\Documents\\ProyectoMantraSpa\\spabd.mdf;Integrated Security=True;Connect Timeout=30");
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
