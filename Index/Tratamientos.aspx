@@ -190,7 +190,7 @@
 
 				<tr>
                     <td>
-                        <asp:GridView ID="GridView7" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource5" Width="693px">
+                        <asp:GridView ID="GridView7" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource7" Width="693px">
                             <Columns>
                                 <asp:BoundField DataField="nombre" HeaderText="nombre" SortExpression="nombre" />
                                 <asp:BoundField DataField="descripcion" HeaderText="descripcion" SortExpression="descripcion" />
@@ -199,6 +199,12 @@
                                 <asp:BoundField DataField="precio" HeaderText="precio" SortExpression="precio" />
                             </Columns>
                         </asp:GridView>
+                        <asp:SqlDataSource ID="SqlDataSource7" runat="server" ConnectionString="<%$ ConnectionStrings:spabdConnectionString %>" SelectCommand="SELECT [nombre], [descripcion], [presion], [duracion], [precio] FROM [tratamientos] WHERE ([tipo] LIKE '%' + @tipo + '%')">
+                            <SelectParameters>
+                                <asp:Parameter DefaultValue="maniypedi" Name="tipo" Type="String" />
+                            </SelectParameters>
+                        </asp:SqlDataSource>
+                        <asp:SqlDataSource ID="SqlDataSource6" runat="server"></asp:SqlDataSource>
                         <asp:SqlDataSource ID="SqlDataSource5" runat="server" ConnectionString="<%$ ConnectionStrings:spabdConnectionString %>" SelectCommand="SELECT [nombre], [descripcion], [presion], [duracion], [precio] FROM [tratamientos] WHERE ([tipo] LIKE '%' + @tipo + '%')">
                             <SelectParameters>
                                 <asp:Parameter DefaultValue="manicure" Name="tipo" Type="String" />

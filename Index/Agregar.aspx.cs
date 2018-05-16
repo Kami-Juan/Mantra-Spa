@@ -28,8 +28,8 @@ namespace Index
             String tipo = this.Request.Form["tipo"];
             //String zonas = this.Request.Form["zonas"];
             String presion = this.Request.Form["presion"];
-           // String tratamiento = this.Request.Form["txtTratamiento"]; 
-            String precio = this.Request.Form["txtPrecio"];
+            // String tratamiento = this.Request.Form["txtTratamiento"]; 
+            String precio = txtPrecio.Text;
 
             
 
@@ -37,11 +37,12 @@ namespace Index
             String OrdenSQL;
             Conn = new SqlConnection();
             //Conn.ConnectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\juandedios\\Documents\\ProyectoMantraSpa\\Mantra-Spa\\spabd.mdf;Integrated Security=True;Connect Timeout=30";
-            Conn.ConnectionString = ("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\llito\\Documents\\Visual Studio 2015\\Projects\\Mantra-Spa\\spabd.mdf;Integrated Security=True;Connect Timeout=30");
+            Conn.ConnectionString = ("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\JoséLuis\\Documents\\Visual Studio 2015\\Projects\\Mantra-Spa\\spabd.mdf;Integrated Security=True;Connect Timeout=30");
+        
             try
             {
                 Conn.Open();
-                OrdenSQL = String.Format("INSERT INTO tratamientos(tipo,nombre,descripcion,presion,duracion,precio) VALUES('{0}','{1}','{2}','{3}',{4},{5})", tipo, nombre, descripcion, presion, 10, txtPrecio);
+                OrdenSQL = String.Format("INSERT INTO tratamientos(tipo,nombre,descripcion,presion,duracion,precio) VALUES('{0}','{1}','{2}','{3}',{4},{5})", tipo, nombre, descripcion, presion, 10, precio);
 
                 SqlCommand cmd = new SqlCommand(OrdenSQL, Conn);
                 cmd.ExecuteNonQuery();
